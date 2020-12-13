@@ -8,6 +8,8 @@ class HeroApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: ' Formulaire COVID-19',
+      theme: ThemeData(fontFamily: 'Raleway'),
       home: MainScreen(),
     );
   }
@@ -32,12 +34,16 @@ class MainScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 80.0),
-            child: Text("Bienvenue !"),
+            child: Text(
+              "Bienvenue !",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child:
-                Text("Pour debuter, entrez votre nom"), // stocker une variable
+            child: Text(
+              "Pour debuter, entrez votre nom",
+            ), // stocker une variable
           ),
           Container(
             width: 100,
@@ -143,11 +149,11 @@ class Detail2Screen extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.only(top: 20.0),
+        padding: const EdgeInsets.only(top: 15.0),
         child: Text("formulaire CoviD-19 pour "),
       ),
       Padding(
-        padding: const EdgeInsets.only(top: 20.0),
+        padding: const EdgeInsets.only(top: 15.0),
         child: Text("Date 2020-11-25"),
       ),
       Padding(
@@ -179,19 +185,30 @@ class Detail2Screen extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Expanded(
-              child: Text(
-                  'jai envoyé hors du Canada dans les derniers 14 jours',
-                  textAlign: TextAlign.left),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 100.0),
+                child: Text(
+                  'jai voyagé hors du Canada dans les derniers 14 jours',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontFamily: 'Raleway'),
+                ),
+              ),
             ),
-            Icon(
-              Icons.clear,
-              color: Colors.black,
-              size: 30.0,
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.clear,
+                color: Colors.black,
+                size: 30.0,
+              ),
             ),
-            Icon(
-              Icons.done,
-              color: Colors.black,
-              size: 30.0,
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.done,
+                color: Colors.black,
+                size: 30.0,
+              ),
             ),
           ],
         ),
@@ -201,25 +218,36 @@ class Detail2Screen extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Expanded(
-              child: Text(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 100.0),
+                child: Text(
                   "J'ai été en contacte avec un individu qui as eu COVID-19 dans les derniers 14 jours",
-                  textAlign: TextAlign.left),
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontFamily: 'Raleway'),
+                ),
+              ),
             ),
-            Icon(
-              Icons.clear,
-              color: Colors.black,
-              size: 30.0,
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.clear,
+                color: Colors.black,
+                size: 30.0,
+              ),
             ),
-            Icon(
-              Icons.done,
-              color: Colors.black,
-              size: 30.0,
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.done,
+                color: Colors.black,
+                size: 30.0,
+              ),
             ),
           ],
         ),
       ),
       Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.only(bottom: 10.0),
         child: FlatButton(
             onPressed: () {
               Navigator.pop(context);
